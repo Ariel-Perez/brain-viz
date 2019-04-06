@@ -1,0 +1,96 @@
+.layer,
+.sensor,
+.sensor-representation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer,
+.sensor-representation {
+    flex-direction: row;
+}
+
+.sensor {
+    flex-direction: column;
+}
+
+.sensor-representation {
+    display: flex;
+    flex-direction: row;
+}
+
+.brain.top-down .sensor,
+.brain.bottom-up .sensor {
+    flex-direction: row;
+}
+
+.sensor input {
+    margin: 5px;
+    color: #555;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.layer.left-to-right,
+.top-down .layer,
+.bottom-up .layer,
+.sensor.top-down,
+.sensor.bottom-up,
+.left-to-right .sensor {
+    flex-direction: row;
+}
+
+.layer.top-down,
+.layer.bottom-up,
+.brain.left-to-right .layer,
+.brain.left-to-right .sensor-representation,
+.sensor.left-to-right,
+.brain.top-down .sensor,
+.brain.bottom-up .sensor {
+    display: inline-flex;
+    flex-direction: column-reverse;
+}
+
+.neuron,
+.sensor-input {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+}
+
+.sensor-input.active {
+    background-color: yellow;
+}
+
+.sensor.interactive .sensor-input:hover {
+    cursor: pointer;
+}
+
+.neuron:hover,
+.sensor-input:hover {
+    background-color: #61dafb;
+}
+
+.brain {
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.brain.left-to-right {
+    flex-direction: row;
+}
+
+.brain.top-down {
+    flex-direction: column-reverse;
+}
+
+.brain.bottom-up {
+    flex-direction: column;
+}
+
+.sensor {
+    margin: 15px;
+}
